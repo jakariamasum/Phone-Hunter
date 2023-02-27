@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <main>
+        <h1 class="text-center font-bold text-5xl mb-5">Welcome Our Mobile Store</h1>
+        <div class="text-center">
+            <input id="search-value" type="text" placeholder="Type here" class="input input-bordered input-success w-full max-w-xs mb-2 lg:mb-7" />
+            <button id="search-btn" onclick="searchByName()" class="btn btn-outline btn-accent">Search</button>
+        </div>
+        <section id="container" class="w-[90%] mx-auto grid grid-cols lg:grid-cols-4 gap-4">
+
+        </section>
+        <section class="flex h-[50vh] justify-center items-center hidden" id="load">
+
+            <div class="text-center ">
+                <progress class="progress w-40 bg-green-500" ></progress>
+            </div>
+        </section>
+        
+        <div class=" h-[40vh] flex justify-center items-center hidden" id="err">
+            <div class="text-center">
+                <img src="images/error1.jpg" class="w-40 ml-36">
+            <p class="text-red text-3xl font-semibold text-red-500">No phones available. Please try again</p>
+            </div>
+        </div>
+
+        <section>
+            <!-- The button to open modal -->
+
+<input type="checkbox" id="my-modal" class="modal-toggle" />
+<div class="modal">
+  <div class="modal-box">
+    <h3 class="font-bold text-lg" id="modal-title"></h3>
+    <div class="py-4" id="modal-body"></div>
+    <div class="modal-action">
+      <label for="my-modal" class="btn">Close!</label>
+    </div>
+  </div>
+</div>
+
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>
